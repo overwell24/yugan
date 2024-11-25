@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>육안</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}" /> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+
+    <script src="{{ url_for('static', filename='js/upload.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="meatimg">
+            <h1>肉眼</h1>
+            <h2>소고기의 등급을 측정해드립니다.</h2>
+            <p>총 5가지의 등급으로 분류되며, 정확도와 같이 출력됩니다.</p>
+        </div>
+
+        <form class="fileupload" id="fileupload" action="result" method="post" enctype="multipart/form-data">
+            <svg xmlns="http://www.w3.org/2000/svg" width="66" height="63" viewBox="0 0 66 63" fill="none">
+                <path d="M45.2331 20.3728L59.7615 20.3728C61.9707 20.3728 63.7615 22.1637 63.7615 24.3728L63.7615 56.6617C63.7615 58.8708 61.9707 60.6617 59.7615 60.6617L6 60.6617C3.79086 60.6617 2 58.8708 2 56.6617L2 24.3728C2 22.1637 3.79086 20.3728 6 20.3728L20.5285 20.3728" stroke="#4E4343" stroke-width="4" stroke-linecap="round"/>
+                <g opacity="0.3">
+                  <path d="M42.1445 11.0753L33.5887 2.48874C33.1979 2.09653 32.5627 2.09653 32.1719 2.48874L23.6161 11.0753" stroke="#3E3737" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M32.8808 4.87691L32.8809 42.0667" stroke="#3E3737" stroke-width="4" stroke-linecap="round"/>
+                </g>
+            </svg>        
+            <span class="afile" id="inner">파일을 끌어다 놓으세요.</span>
+            
+                <label for="input" class="file-upload-btn">혹은 업로드</label>
+                <input id="input" class="input" accept="image/*" type="file" name="meat_img" required="true" multiple="false">
+        
+        </form>
+</div>
+    </div>
+    </div>
+</body>
+</html>
